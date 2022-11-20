@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Необязательное задание.
+
+Необходимо реализовать функцию, которая будет принимать первым аргументом
+целое положительное число, в следующих трех аргументах функция принимает слова
+в разных склонениях.
+Функция должна возвращать одно из трех переданных в параметры слов подходящее
+под число, которое передано первым аргументом.
+
+Пример:
+console.log(declinationOfNumber(1, "яблоко", "яблока", "яблок")); // "яблоко"
+console.log(declinationOfNumber(2, "мяч", "мяча", "мячей")); // "мяча"
+console.log(declinationOfNumber(5, "стул", "стула", "стульев")); // "стульев"
+
+Функция должна работать с любым словом и любым целым положительным числом.
+Все аргументы, которые будут передаваться функции будут верны.
+-->
+<script>
+  "use strict";
+  
+  console.log(declinationOfNumber(0, "яблоко", "яблока", "яблок"));
+  console.log(declinationOfNumber(1, "яблоко", "яблока", "яблок"));
+  console.log(declinationOfNumber(2, "яблоко", "яблока", "яблок"));
+  console.log(declinationOfNumber(678, "яблоко", "яблока", "яблок"));
+  console.log(declinationOfNumber(1001, "яблоко", "яблока", "яблок"));
+
+  function declinationOfNumber(number, word_1, word_2, word_3) {
+    if (number % 10 === 1 ) {
+      return `У меня есть ${number} ${word_1}`
+    } else if (number >= 5 && number <= 20) {
+      return `У меня есть ${number} ${word_3}`
+    } else if (number % 10 >= 2 && number % 10 <= 4) {
+      return `У меня есть ${number} ${word_2}`
+    } else {
+      return `У меня есть ${number} ${word_3}`
+    }
+
+  }
+  /*
+  Правда функция будет работать корректно только при
+  порядке слов "один, два, пять", но о перемене слов местами в
+  задании не сказано :)
+  */
+ 
+</script>
+</body>
+</html>
