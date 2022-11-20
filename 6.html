@@ -33,13 +33,13 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
 
   function declinationOfNumber(number, word_1, word_2, word_3) {
     if (number % 10 === 1 ) {
-      return `У меня есть ${number} ${word_1}`
+      return `У меня есть ${number} ${word_1}`;
     } else if (number >= 5 && number <= 20) {
-      return `У меня есть ${number} ${word_3}`
+      return `У меня есть ${number} ${word_3}`;
     } else if (number % 10 >= 2 && number % 10 <= 4) {
-      return `У меня есть ${number} ${word_2}`
+      return `У меня есть ${number} ${word_2}`;
     } else {
-      return `У меня есть ${number} ${word_3}`
+      return `У меня есть ${number} ${word_3}`;
     }
 
   }
