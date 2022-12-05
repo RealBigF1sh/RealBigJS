@@ -73,6 +73,8 @@
     this.time = new Date();
   };
 
+
+
   const post1 = new PostES5('John', 'Hello, world');
   console.log(post1.text); 
   console.log(post1.time);
@@ -84,7 +86,38 @@
   attached1.makeTextHilighted();
   console.log(attached1.highlighted);
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  class PostES6 {
+    constructor(name, text) {
+      this.name = name;
+      this.text = text;
+      this.date = new Date();
+    }
+
+    edit(text) {
+      this.text = prompt('Текст:');
+      this.date = new Date();
+    }
+  }
+
+  const postES6 = new PostES6('John', 'Bye, world');
+  console.log(postES6);
+  postES6.edit();
+  console.log(postES6);
+
+  class AttachedPostES6 extends PostES6 {
+    highlighted = false;
+    makeTextHighlighted() {
+      this.highlighted = true;
+      this.date = new Date();
+    }
+  }
+
+  const attachedPostES6 = new AttachedPostES6('John', 'Bye, world');
+  console.log(attachedPostES6);
+  attachedPostES6.makeTextHighlighted();
+  attachedPostES6.edit();
+  console.log(attachedPostES6);
+  
 </script>
 </body>
 </html>
